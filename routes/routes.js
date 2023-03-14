@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 //GET Homepage
-app.get('/', auth, (req, res) => 
+app.get('/', (req, res) => 
 {res.send('Welcome to Events API');
 res.end();});
 
