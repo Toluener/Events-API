@@ -22,7 +22,7 @@ app.get('/events', auth, async (req, res) =>
 {const events = await eventModel.find({});
 
 try {
-    res.send(events);}
+    res.json(events);}
  catch(error){res.status(500).send(error);}
 });
 
@@ -55,7 +55,7 @@ app.post('/event', auth, async (req, res) =>{
                       subject: 'Event Attendance Status',
                       message: `You have been added to the event: ${event.id} with description: ${event.description}`});
                     }}
-        res.send(event);            
+        res.json(event);            
     } catch(error) {
         res.status(500).send(error);
     }})
