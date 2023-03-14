@@ -1,7 +1,6 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const eventModel = require('../model/Eventschema');
-const bodyParser = require('body-parser');
 const auth = require('../middleware/auth');
 const sendEmail = require('../utilis/email');
 
@@ -10,7 +9,6 @@ const sendEmail = require('../utilis/email');
 const app = express();
 
 app.use(express.json());
-// app.use(bodyParser.json());
 
 
 //GET Homepage
