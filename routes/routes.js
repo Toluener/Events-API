@@ -10,7 +10,7 @@ const sendEmail = require('../utilis/email');
 const app = express();
 
 app.use(express.json());
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 
 //GET Homepage
@@ -105,7 +105,7 @@ app.delete('/event/:id', auth, async (req, res) => {
     catch(error) {res.status(500).send(error);}});
 
 
-    
+
 
   //DELETE ATTENDEE FROM EVENT
 
