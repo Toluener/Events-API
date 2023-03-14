@@ -3,9 +3,8 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const mongoose = require('mongoose')
-const {privateKey} = JSON.parse(process.env.URL_PRIVATE_KEY)
-console.log(privateKey);
-const url = privateKey;
+// const {privateKey} = JSON.parse(process.env.URL_PRIVATE_KEY)
+const url = "mongodb+srv://toluehinmosan51:toluehinmosan51@cluster0.ezos16b.mongodb.net/?retryWrites=true&w=majority";
 
 const connectionParams={
     useNewUrlParser: true,
