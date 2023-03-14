@@ -29,9 +29,9 @@ try {
 
 app.get('/event/:id', auth, async (req, res) =>
 {const event = await eventModel.findById(req.params.id);
- let attendeeCount = event.attendees.length;
+//  let attendeeCount = event.attendees.length;
 try {
-    res.send(`REPORT: For your event ${event.description}, the number of attendees registered for the event is:${attendeeCount}, the attendees registered are ${event.attendees}, the date and time for this event is ${event.date}, ${event.time} and it will be held at ${event.location}. 
+    res.send(`REPORT: For your event ${event.description}, the number of attendees registered for the event is:${event.attendees.length}, the attendees registered are ${event.attendees}, the date and time for this event is ${event.date}, ${event.time} and it will be held at ${event.location}. 
     Make sure to prepare on time as you are the host. Wishing you a fun filled event!!`);}
  catch(error){res.status(500).send(error);}
 });
