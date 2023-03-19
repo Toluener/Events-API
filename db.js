@@ -1,10 +1,10 @@
-//db.js
+s
 const dotenv = require("dotenv");
 dotenv.config();
 
 const mongoose = require('mongoose')
 
-const url = "mongodb+srv://toluehinmosan51:toluehinmosan51@cluster0.ezos16b.mongodb.net/?retryWrites=true&w=majority";
+const url = process.env.MONGODB_CONNECTION;
 
 const connectionParams={
     useNewUrlParser: true,
